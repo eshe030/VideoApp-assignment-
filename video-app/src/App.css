@@ -1,0 +1,62 @@
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.mainheading{
+  color: #3E54A0;
+text-align: left;
+font-family: Arial;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.upload{
+  color: #3E54A0;
+position: absolute;
+left: 290px;
+font-family: Arial;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.video-container{
+position: absolute;
+left: 290px;
+}
+
+.metadata-container {
+  position: absolute;
+  left: 950px;
+  top:173px;
+  text-align: center;
+  background-color: #3E54A0;
+  color: white;
+  border-radius: 20px;
+  height: 350px;
+  width: 300px;
+}
+
+.metadata-container h2 {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
