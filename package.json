@@ -2,6 +2,7 @@
   "dependencies": {
     "prop-type": "^0.0.1",
     "react-media-player": "^0.7.9",
-    "react-player": "^2.13.0"
+    "react-player": "^2.13.0",
+    "wavesurfer.js": "^7.4.5"
   }
 }

@@ -50,8 +50,17 @@ left: 290px;
   margin-bottom: 10px;
 }
 
+.waveform-container{
+  position: absolute;
+  top:550px;
+  left:290px;
+  color: #3E54A0;
+}
 
-
+.canvas-container{
+  position: absolute;
+  top: 600px;
+}
 
 
 

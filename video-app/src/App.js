@@ -1,11 +1,13 @@
 // src/App.js
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
+import Waveform from './Waveform';
 
 function App() {
   const [videoFile, setVideoFile] = useState(null);
   const [videoMetadata, setVideoMetadata] = useState(null);
+  const canvasRef = useRef(null);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -28,6 +30,20 @@ function App() {
       reader.readAsDataURL(file);
     }
   };
+
+  useEffect(() => {
+    // Draw the first frame on the canvas
+    if (videoFile && canvasRef.current) {
+      const video = document.createElement('video');
+      video.src = URL.createObjectURL(videoFile);
+
+      video.addEventListener('loadeddata', () => {
+        const canvas = canvasRef.current;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      });
+    }
+  }, [videoFile]);
 
   return (
     <div className="app-container">
@@ -61,6 +77,21 @@ function App() {
             <p>Duration: {videoMetadata.duration.toFixed(2)} seconds</p>
             <p>Width: {videoMetadata.width}px</p>
             <p>Height: {videoMetadata.height}px</p>
+          </div>
+        )}
+
+        {/* Display audio waveform */}
+        {videoMetadata && (
+          <div className="waveform-container">
+            <h2>Audio Waveform</h2>
+            <Waveform audioUrl={URL.createObjectURL(videoFile)} />
+          </div>
+        )}
+
+        {/* Canvas to display the first frame of the video */}
+        {videoFile && (
+          <div className="canvas-container">
+            <canvas ref={canvasRef} width="300" height="200" />
           </div>
         )}
       </div>
