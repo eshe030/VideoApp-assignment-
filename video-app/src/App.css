@@ -66,6 +66,7 @@ left: 290px;
   font-size: 20px;
   background-color: #3E54A0;
   color: white;
+  padding: 10px;
 }
 @media (max-width: 700px) {
   .app-container {
