@@ -61,6 +61,12 @@ left: 290px;
   position: absolute;
   top: 600px;
 }
+
+.popup{
+  font-size: 20px;
+  background-color: #3E54A0;
+  color: white;
+}
 @media (max-width: 700px) {
   .app-container {
     padding: 10px;
