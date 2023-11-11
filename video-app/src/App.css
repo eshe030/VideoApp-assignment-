@@ -37,7 +37,7 @@ left: 290px;
 .metadata-container {
   position: absolute;
   left: 950px;
-  top:173px;
+  top:133px;
   text-align: center;
   background-color: #3E54A0;
   color: white;
@@ -61,9 +61,33 @@ left: 290px;
   position: absolute;
   top: 600px;
 }
+@media (max-width: 700px) {
+  .app-container {
+    padding: 10px;
+  }
 
+  .mainheading {
+    font-size: 30px;
+  }
 
+  .upload {
+    font-size: 20px;
+    left: 12%;
+    transform: translateX(-50%);
+  }
 
+  .video-container,
+  .waveform-container,
+  .canvas-container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .metadata-container{
+    left: 650px;
+    top: 120px;
+  }
+}
 
 
 
