@@ -9,7 +9,7 @@ const Waveform = ({ audioUrl, videoElement }) => {
     // Create a new WaveSurfer instance
     wavesurfer.current = WaveSurfer.create({
       container: waveformRef.current,
-      waveColor: 'violet',
+      waveColor: '#3E54A0',
       progressColor: 'purple',
     });
 
